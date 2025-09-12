@@ -575,6 +575,18 @@
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
+                .testimonials .section-content {
+        margin-left: 0;
+        margin-top: 80px;
+        padding: 0 10px;
+    }
+    
+    .testimonial-card {
+        padding: 40px 20px;
+        margin: 0 10px;
+        max-width: none;
+    }
+    
         }
 
         /* Smooth scrolling */
@@ -624,6 +636,108 @@
 .social-links a:hover::after {
     opacity: 1;
 }
+/* Testimonials Section */
+.testimonials {
+    background: #000;
+    text-align: center;
+}
+
+.testimonial-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #111;
+    padding: 60px;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ff00;
+    box-shadow: 0 20px 40px rgba(74, 222, 128, 0.1);
+}
+
+.rating {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.star {
+    color: #00ff5e;
+    font-size: 1.2rem;
+}
+
+.testimonial-quote {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.testimonial-quote::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    font-size: 4rem;
+    color: #00ff5e;
+    opacity: 0.3;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00ff00, #00ffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 1.5rem;
+    overflow: hidden;
+    border: 3px solid #333;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.author-avatar:hover {
+    border-color: #00ff5e;
+    transform: scale(1.1);
+}
+
+.author-details h4 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.author-details p {
+    color: #00ff5e;
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -635,6 +749,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#clients">Projects</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#pricing">Process</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -706,7 +821,37 @@
     </a>
   </div>
 </section>
-
+<!-- Testimonials Section -->
+<section id="testimonials" class="section testimonials">
+    <div class="section-header">TESTIMONIALS</div>
+    <div class="section-content">
+        <div class="testimonial-card">
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+            <div class="testimonial-quote">
+                I am very satisfied with the website created for my dental clinic. It has a clean design and is easy for patients to navigate. We are already receiving great feedback.
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">
+                    <!-- Option 1: With real image -->
+                    <img src="client.jpg" alt="Rajesh Sharma" onerror="this.style.display='none'; this.parentElement.innerHTML='RS';">
+                    
+                    <!-- Option 2: Fallback initials (will show if image fails to load) -->
+                    <!-- RS -->
+                </div>
+                <div class="author-details">
+                    <h4>Dr.Karthik </h4>
+                    <p>Doctor , Karthik detal clinic</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Pricing Section -->
      <section id="pricing" class="section pricing">
